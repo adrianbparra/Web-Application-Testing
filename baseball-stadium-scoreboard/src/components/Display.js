@@ -4,7 +4,9 @@ import React from "react"
 
 export default function Display(props) {
 
-    const {homeScore,guestScore, inning, ball, strike, out } = props;
+    console.log(props)
+
+    const {homeScore,guestScore, inning, balls, strikes, outs } = props;
 
     return(
         <div>
@@ -22,12 +24,12 @@ export default function Display(props) {
 
             <div>
                 <p>Ball</p>
-                <span>{ball}</span>
+                <span>{balls}</span>
 
                 <p>Strike</p>
-                <span>{strike}</span>
+                <span>{strikes}</span>
                 <p>Out</p>
-                <span>{out}</span>
+                <span>{outs}</span>
             </div>
 
         </div>
