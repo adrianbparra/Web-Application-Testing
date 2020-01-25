@@ -1,11 +1,13 @@
-import React from 'react';
-import {useState} from "react";
+import React from 'react'
+import {useState} from "react"
 
-import './App.css';
+// import './App.css';
 
 import Display from "./components/Display.js";
 import Dashboard from "./components/Dashboard.js";
 // import {InputHook }from "./hooks/InputHook.js";
+
+
 
 function App() {
 
@@ -47,6 +49,8 @@ function App() {
     setStrikes(strikes + 1)
 
   }
+
+  
   
 
   const addHit = () =>{
@@ -56,12 +60,22 @@ function App() {
 
   }
 
+  const addFoul = () =>{
+    if(strikes === 0) {
+      setStrikes(strikes + 1)
+    } else if( strikes ===1){
+      setStrikes(strikes + 1)
+    } else {
+      return
+    }
+
+  }
 
   return (
     <div className="App">
       <Display homeScore={homeScore} guestScore={guestScore} strikes={strikes} balls={balls}/>
 
-      <Dashboard addStrike={addStrike} addBall={addBall}/>
+      <Dashboard addStrike={addStrike} addBall={addBall} addFoul={addFoul} addHit={addHit}/>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import React from "react"
 
 export default function Dashboard(props) {
 
-    const {addStrike,addBall} = props;
+    const {addStrike,addBall,addFoul, addHit} = props;
 
     return(
         <div>
@@ -16,8 +16,8 @@ export default function Dashboard(props) {
             <div>
                 <button onClick={addBall}>Ball</button>
                 <button onClick={addStrike}>Strike</button>
-                <button>Foul</button>
-                <button>Hit</button>
+                <button onClick= {addFoul}>Foul</button>
+                <button onClick={addHit}>Hit</button>
             </div>
             
 
